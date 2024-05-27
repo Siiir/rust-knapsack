@@ -2,7 +2,16 @@ use ordered_float::NotNan;
 use serde::{Deserialize, Serialize};
 
 #[derive(
-    derive_more::Constructor, Clone, Copy, Deserialize, Serialize, PartialEq, Eq, Hash, Debug,
+    derive_more::Constructor,
+    Clone,
+    Copy,
+    Deserialize,
+    Serialize,
+    PartialEq,
+    Eq,
+    Hash,
+    Debug,
+    tabled::Tabled,
 )]
 pub struct Object {
     value: NotNan<f64>,
